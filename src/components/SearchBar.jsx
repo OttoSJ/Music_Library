@@ -1,8 +1,4 @@
-import { useState } from "react";
-
 function SearchBar({ handleSearch }) {
-  let [searchTerm, setSearchTerm] = useState("");
-
   return (
     <form>
       <input
