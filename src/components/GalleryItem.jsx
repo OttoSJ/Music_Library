@@ -24,16 +24,18 @@ function GalleryItem(props) {
 
   const simpleView = () => {
     return (
-      <div style={simpleStyle}>
-        <h3>{props.item.trackName}</h3>
-        <h4>{props.item.collectionName}</h4>
+      <div className="container">
+        <div style={simpleStyle}>
+          <h3>{props.item.trackName}</h3>
+          <h4>{props.item.collectionName}</h4>
+        </div>
       </div>
     );
   };
 
   const detailView = () => {
     return (
-      <div style={detailStyle}>
+      <div className="container" style={detailStyle}>
         <h2>{props.item.trackName}</h2>
         <h3>
           <Link to={`/artist/${props.item.artistId}`}>

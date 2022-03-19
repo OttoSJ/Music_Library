@@ -1,3 +1,5 @@
+import Button from "react-bootstrap/Button";
+
 function SearchBar({ handleSearch }) {
   return (
     <form>
@@ -6,8 +8,8 @@ function SearchBar({ handleSearch }) {
         placeholder="Enter a search term here"
         onChange={(e) => handleSearch(e, e.target.value)}
       />
-
-      <input type="submit" />
+      <Button as="input" type="submit" value="Submit" className="m-2" />{" "}
+      {/* <input type="submit" /> */}
     </form>
   );
 }
