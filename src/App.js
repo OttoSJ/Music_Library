@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ArtistView from "./components/ArtistView";
 import AlbumView from "./components/AlbumView";
+import { DataContext } from "./context/DataContext";
 
 function App() {
   let [search, setSearch] = useState("");
@@ -44,7 +45,9 @@ function App() {
             element={
               <>
                 <SearchBar handleSearch={handleSearch} />
-                <Gallery data={data} />
+                <DataContext.Provider value={data}>
+                  <Gallery />
+                </DataContext.Provider>
               </>
             }
           />
